@@ -48,4 +48,47 @@ public class FileHelpersTests
         Func<Task> action = async () => await FileHelpers.getGitFileShaAsync(filename);
         await action.Should().ThrowAsync<ArgumentException>().ConfigureAwait(false);
     }
+
+    [Fact]
+    public void IsTextFile_ShouldReturnTrue_WhenFilenameEndsWithTextFileExtension()
+    {
+        // Arrange
+        string filename = "example.txt";
+
+        // Act
+        bool result = FileHelpers.IsTextFile(filename);
+
+        // Assert
+        result.Should().BeTrue();
+    }
+
+    [Fact]
+    public void IsTextFile_ShouldReturnFalse_WhenFilenameDoesNotEndWithTextFileExtension()
+    {
+        // Arrange
+        string filename = "example.jpg";
+
+        // Act
+        bool result = FileHelpers.IsTextFile(filename);
+
+        // Assert
+        result.Should().BeFalse();
+    }
+
+    [Theory]
+    [InlineData(null)]
+    [InlineData("")]
+    [InlineData(" ")]
+    public void IsTextFile_ShouldThrowException_WhenFilenameIsNullOrWhitespace(string filename)
+    {
+        // Act & Assert
+        /*
+        Assert.Throws<GuardClauseException>(() => FileHelpers.IsTextFile(filename))
+            .ParamName.Should().Be(nameof(filename));
+        */
+
+        Action act = () => FileHelpers.IsTextFile(filename);
+        act.Should().Throw<ArgumentException>()
+            .WithParameterName(nameof(filename));
+    }
 }
