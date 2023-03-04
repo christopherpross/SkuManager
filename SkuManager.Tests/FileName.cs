@@ -2,6 +2,8 @@
 
 using FluentAssertions;
 
+using SkuManager.Extensions;
+
 namespace SkuManager.Tests;
 
 public class GuardClauseExtensionsTests
