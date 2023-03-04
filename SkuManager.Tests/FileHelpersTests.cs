@@ -1,13 +1,8 @@
-using System;
-using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 
 using FluentAssertions;
 
 using SkuManager.Helpers;
-
-using Xunit;
 
 namespace SkuManager.Tests
 {
@@ -52,6 +47,6 @@ namespace SkuManager.Tests
             // Act and Assert
             Func<Task> action = async () => await FileHelpers.getGitFileShaAsync(filename);
             await action.Should().ThrowAsync<ArgumentException>().ConfigureAwait(false);
-                }
+        }
     }
 }
