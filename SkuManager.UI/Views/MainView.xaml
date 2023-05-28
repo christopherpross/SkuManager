@@ -1,0 +1,129 @@
+﻿<Window x:Class="SkuManager.UI.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkuManager.UI.Resources.Strings"
+            mc:Ignorable="d"
+        Title="{x:Static local:LocalizableStrings.mainwindow_title}"
+        Height="1000" Width="1000"
+        >
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            x:Name="instructionsLabel"
+            Content="{x:Static local:LocalizableStrings.mainwindow_instructionsLabel}"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="20"
+               Padding="10"
+               Foreground="White"
+            AutomationProperties.HeadingLevel="Level1"
+            Focusable="True"
+        />
+
+        <ComboBox
+            x:Name="actionPicker"
+            AutomationProperties.LabeledBy="{x:Reference Name=instructionsLabel}"
+            AutomationProperties.HelpText="{x:Static local:LocalizableStrings.mainwindow_actionPicker_accessibilityHint}"
+            Grid.Column="0"
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            FontSize="20"
+            Background="White"
+            Foreground="Black"
+            ItemsSource="{Binding Actions}"
+            DisplayMemberPath="Title"
+            SelectedValuePath="Action"
+            SelectionChanged="actionPicker_SelectionChanged">
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="AutomationProperties.Name" Value="{Binding Title}" />
+                </Style>
+            </ComboBox.ItemContainerStyle>
+        </ComboBox>
+        
+        <TextBox
+            x:Name="actionDescription"
+            IsReadOnly="True"
+            AutomationProperties.Name="{x:Static local:LocalizableStrings.mainwindow_actionDescription_accessibilityDescription}"
+            Text="{x:Static local:LocalizableStrings.mainwindow_actionDescription_placeholder}"
+            Grid.Row="1"
+            Grid.Column="2"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            FontSize="18"
+            Background="White"
+            Foreground="Black"
+        />
+
+        <Button
+            x:Name="okButton"
+            Content="{x:Static local:LocalizableStrings.mainwindow_okButton_title}"
+            Width="150"
+            Height="70"
+            Grid.Column="0"
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="18"
+            Padding="10"
+            BorderBrush="Yellow"
+            Background="White"
+            Foreground="Black"
+            AutomationProperties.HelpText="{x:Static local:LocalizableStrings.mainwindow_okButton_accessibilityHint}"
+        />
+
+        <Button
+            x:Name="optionsButton"
+            Content="{x:Static local:LocalizableStrings.mainwindow_optionsButton_title}"
+            Width="150"
+            Height="70"
+            Grid.Column="1"
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="18"
+            Padding="10"
+            BorderBrush="Yellow"
+            Background="White"
+            Foreground="Black"
+            AutomationProperties.HelpText="{x:Static local:LocalizableStrings.mainwindow_optionsButton_accessibilityHint}"
+        />
+
+        <Button 
+            x:Name="moreButton"
+            Content="{x:Static local:LocalizableStrings.mainwindow_moreButton_title}"
+            Width="150"
+            Height="70"
+            Grid.Column="2"
+            Grid.Row="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="18"
+            Padding="10"
+            BorderBrush="Yellow"
+            Background="White"
+            Foreground="Black"
+            AutomationProperties.HelpText="{x:Static local:LocalizableStrings.mainwindow_moreButton_accessibilityHint}"
+        />
+        
+    </Grid>
+
+
+</Window>
