@@ -1,6 +1,6 @@
 # Welcome to SkuManager
 
-Dies ist eine kleine Kommandozeilen-Anwendung um das WoW Addon [Sku](https://duugu.github.io/Sku/ ) und dessen Abhängigkeiten zu installieren, aktualisieren und allgemein Aufgaben zu automatisieren.
+Dies ist eine kleine WPF-Anwendung um das WoW Addon [Sku](https://duugu.github.io/Sku/ ) und dessen Abhängigkeiten zu installieren, aktualisieren und allgemein Aufgaben zu automatisieren.
 
 ## Motivation
 
@@ -10,6 +10,6 @@ Um das aktualisieren des Addons zu vereinfachen und um weitere Aufgaben für nic
 ## Installation
 
 Die Installation ist recht simpel. Einfach das neueste Release Herunterladen und die ZIP-Datei an einem Ort der Wahl entpacken.
-Beim ersten Start werden ein paar Einstellungen abgefragt und dann kann es auch schon los gehen.
+
 
 *** TODO more documentation ***
