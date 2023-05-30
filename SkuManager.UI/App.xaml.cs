@@ -31,10 +31,7 @@ public partial class App : Application
             .ConfigureServices(services =>
             {              
                 services.AddSingleton<MainViewModel>();
-                services.AddSingleton<MainView>(s => new MainView()
-                {
-                    DataContext = s.GetRequiredService<MainViewModel>()
-                });
+                services.AddSingleton<MainView>();
             })
             .Build();
     }
@@ -55,13 +52,14 @@ public partial class App : Application
         await _host.StopAsync();
         _host.Dispose();
         Log.CloseAndFlush();
+        DeleteOldLogFiles();
         base.OnExit(e);
     }
 
     private LoggerConfiguration setupSerilog(LoggerConfiguration loggerConfiguration)
     {
         var flushInterval = new TimeSpan(0, 0, 1);
-        string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmm");
+        string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
         var file = Path.Combine(PathHelper.LogDirectory, $"{timestamp}.log");
 
         return loggerConfiguration
@@ -69,4 +67,29 @@ public partial class App : Application
             .Enrich.FromLogContext()
             .WriteTo.File(file, encoding: Encoding.UTF8);
     }
+
+    private void DeleteOldLogFiles()
+    {
+        string logDirectory = PathHelper.LogDirectory;
+        DirectoryInfo directoryInfo = new DirectoryInfo(logDirectory);
+        FileInfo[] logFiles = directoryInfo.GetFiles("*.log");
+
+        int filesToKeep = 5;
+
+        // Check if the number of log files is less than or equal to the desired number of files to keep
+        if (logFiles.Length <= filesToKeep)
+        {
+            return; // There are no more log files than the number to be kept, so return without performing any further actions
+        }
+
+        // Sort the log files based on their file names in ascending order
+        Array.Sort(logFiles, (f1, f2) => f1.Name.CompareTo(f2.Name));
+
+        // Delete the excess log files before the last "filesToKeep" files
+        for (int i = 0; i < logFiles.Length - filesToKeep; i++)
+        {
+            logFiles[i].Delete();
+        }
+    }
+
 }

@@ -152,6 +152,27 @@ Es wird nur nach Updates für die Addons/Skripts und deren abhänigkeiten gesuch
   <data name="mainwindow_moreButton_title" xml:space="preserve">
     <value>Mehr</value>
   </data>
+  <data name="mainwindow_moreMenuItem_sku-discord" xml:space="preserve">
+    <value>Besuche uns in Discord</value>
+  </data>
+  <data name="mainwindow_moreMenu_item_about" xml:space="preserve">
+    <value>Über SkuManager</value>
+  </data>
+  <data name="mainwindow_moreMenu_item_donate" xml:space="preserve">
+    <value>Unterstütze das Sku-Projekt</value>
+  </data>
+  <data name="mainwindow_moreMenu_item_sku-repo" xml:space="preserve">
+    <value>Gehe zum Github-Repository des Sku-Addons</value>
+  </data>
+  <data name="mainwindow_moreMenu_item_sku-website" xml:space="preserve">
+    <value>Gehe zur offiziellen Webseite des Sku-Addons</value>
+  </data>
+  <data name="mainwindow_moreMenu_item_skumanager-doc" xml:space="preserve">
+    <value>Öffne die Dokumentation des SkuManagers</value>
+  </data>
+  <data name="mainwindow_moreMenu_item_skumanager-repo" xml:space="preserve">
+    <value>Gehe zum Github-Repository des SkuManagers</value>
+  </data>
   <data name="mainwindow_okButton_accessibilityHint" xml:space="preserve">
     <value>Führt die in diesem Fenster ausgewählte Aktion aus.</value>
   </data>

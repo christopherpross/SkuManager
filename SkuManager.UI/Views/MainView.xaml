@@ -121,8 +121,18 @@
             Background="White"
             Foreground="Black"
             AutomationProperties.HelpText="{x:Static local:LocalizableStrings.mainwindow_moreButton_accessibilityHint}"
-        />
-        
+            Click="moreButton_Click">
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="moreMenuItemSkuWebsite" Header="{x:Static local:LocalizableStrings.mainwindow_moreMenu_item_sku_website}" Click="moreMenuItemSkuWebsite_Click"/>
+                    <MenuItem x:Name="moreMenuItemSkuDiscord" Header="{x:Static local:LocalizableStrings.mainwindow_moreMenuItem_sku_discord}" Click="moreMenuItemSkuDiscord_Click"/>
+                    <MenuItem x:Name="moreMenuItemSkuRepo" Header="{x:Static local:LocalizableStrings.mainwindow_moreMenu_item_sku_repo}" Click="moreMenuItemSkuRepo_Click"/>
+                    <MenuItem x:Name="moreMenuItemSkuManagerRepo" Header="{x:Static local:LocalizableStrings.mainwindow_moreMenu_item_skumanager_repo}" Click="moreMenuItemSkuManagerRepo_Click"/>
+                    
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
     </Grid>
 
 

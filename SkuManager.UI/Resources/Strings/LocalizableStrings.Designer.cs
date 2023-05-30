@@ -156,6 +156,69 @@ namespace SkuManager.UI.Resources.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Über SkuManager ähnelt.
+        /// </summary>
+        public static string mainwindow_moreMenu_item_about {
+            get {
+                return ResourceManager.GetString("mainwindow_moreMenu_item_about", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unterstütze das Sku-Projekt ähnelt.
+        /// </summary>
+        public static string mainwindow_moreMenu_item_donate {
+            get {
+                return ResourceManager.GetString("mainwindow_moreMenu_item_donate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gehe zum Github-Repository des Sku-Addons ähnelt.
+        /// </summary>
+        public static string mainwindow_moreMenu_item_sku_repo {
+            get {
+                return ResourceManager.GetString("mainwindow_moreMenu_item_sku-repo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gehe zur offiziellen Webseite des Sku-Addons ähnelt.
+        /// </summary>
+        public static string mainwindow_moreMenu_item_sku_website {
+            get {
+                return ResourceManager.GetString("mainwindow_moreMenu_item_sku-website", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Öffne die Dokumentation des SkuManagers ähnelt.
+        /// </summary>
+        public static string mainwindow_moreMenu_item_skumanager_doc {
+            get {
+                return ResourceManager.GetString("mainwindow_moreMenu_item_skumanager-doc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Gehe zum Github-Repository des SkuManagers ähnelt.
+        /// </summary>
+        public static string mainwindow_moreMenu_item_skumanager_repo {
+            get {
+                return ResourceManager.GetString("mainwindow_moreMenu_item_skumanager-repo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Besuche uns in Discord ähnelt.
+        /// </summary>
+        public static string mainwindow_moreMenuItem_sku_discord {
+            get {
+                return ResourceManager.GetString("mainwindow_moreMenuItem_sku-discord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Führt die in diesem Fenster ausgewählte Aktion aus. ähnelt.
         /// </summary>
         public static string mainwindow_okButton_accessibilityHint {
