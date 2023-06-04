@@ -1,0 +1,196 @@
+﻿<Window x:Class="SkuManager.UI.Views.SettingsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkuManager.UI.Resources.Strings"
+        xmlns:properties="clr-namespace:SkuManager.UI.Properties"
+        mc:Ignorable="d"
+        x:Name="SettingsWindow"
+        Title="{x:Static local:LocalizableStrings.settingswindow_title}"
+        Height="1000"
+        Width="1000">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label
+            x:Name="instructionsLabelManifestPicker"
+            Content="{x:Static local:LocalizableStrings.settingsWindow_manifestPicker_instructionsLabel}"
+               Grid.Row="0"
+               Grid.Column="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="20"
+               Padding="10"
+               Foreground="White"
+            AutomationProperties.HeadingLevel="Level1"
+            Focusable="True"
+        />
+
+        <ComboBox
+            x:Name="manifestPicker"
+            AutomationProperties.LabeledBy="{Binding ElementName=instructionsLabelManifestPicker}"
+            AutomationProperties.HelpText="{x:Static local:LocalizableStrings.settingsWindow_manifestPicker_instructionsLabel}"
+            Grid.Row="0"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            FontSize="20"
+            Background="White"
+            Foreground="Black"
+            ItemsSource="{Binding AddonManifests}"
+            DisplayMemberPath="Name"
+            SelectedValuePath="Name"
+            SelectionChanged="manifestPicker_SelectionChanged">
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="AutomationProperties.Name" Value="{Binding Name}" />
+                    <Setter Property="ToolTip" Value="{Binding Description}" />
+                </Style>
+            </ComboBox.ItemContainerStyle>
+        </ComboBox>
+
+        <Label
+            x:Name="instructionsLabelWowInterfacePath"
+            Content="{x:Static local:LocalizableStrings.settingsWindow_wowInterfacePath_instructionsLabel}"
+               Grid.Row="1"
+               Grid.Column="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="20"
+               Padding="10"
+               Foreground="White"
+            AutomationProperties.HeadingLevel="Level1"
+            Focusable="True"
+        />
+
+        <TextBox
+            x:Name="wowInterfacePathTextbox"
+            IsReadOnly="True"
+            Text="{Binding Source={x:Static properties:Settings.Default}, Path=WoWInterfaceFolderPath, Mode=TwoWay}"
+            AutomationProperties.LabeledBy="{Binding ElementName=instructionsLabelWowInterfacePath}"
+            AutomationProperties.HelpText="{x:Static local:LocalizableStrings.settingsWindowwowInterfacePath_textBox_accessibilityHint}"
+                                                                                                                                        Grid.Row="1"
+            Grid.Column="1"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            FontSize="18"
+            Background="White"
+            Foreground="Black"
+        />
+
+        <Button
+            x:Name="wowInterfacePathSearchButton"
+            Content="{x:Static local:LocalizableStrings.settingsWindow_wowInterfacePath_searchButton_title}"
+            Width="150"
+            Height="70"
+            Grid.Row="1"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="18"
+            Padding="10"
+            BorderBrush="Yellow"
+            Background="White"
+            Foreground="Black"
+            AutomationProperties.HelpText="{x:Static local:LocalizableStrings.settingsWindow_wowInterfacePath_searchButton_accessibilityHint}"
+            Click="wowInterfacePathSearchButton_Click"
+        />
+
+        <Label
+            x:Name="instructionsLabelWowMenuPath"
+            Content="{x:Static local:LocalizableStrings.settingsWindow_wowMenuPath_instructionsLabel}"
+               Grid.Row="2"
+               Grid.Column="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="20"
+               Padding="10"
+               Foreground="White"
+            AutomationProperties.HeadingLevel="Level1"
+            Focusable="True"
+        />
+
+        <TextBox
+            x:Name="wowMenuPathTextbox"
+            IsReadOnly="True"
+            Text="{Binding Source={x:Static properties:Settings.Default}, Path=WoWMenuPath, Mode=TwoWay}"
+            AutomationProperties.LabeledBy="{Binding ElementName=instructionsLabelWowMenuPath}"
+            AutomationProperties.HelpText="{x:Static local:LocalizableStrings.settingsWindow_wowMenuPath_textbox_accessibilityHint}"
+                                                                                                                                        Grid.Row="2"
+            Grid.Column="1"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            FontSize="18"
+            Background="White"
+            Foreground="Black"
+        />
+
+        <Button
+            x:Name="wowMenuPathSearchButton"
+            Content="{x:Static local:LocalizableStrings.settingsWindow_wowMenuPath_searchButton_title}"
+            Width="150"
+            Height="70"
+            Grid.Row="2"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="18"
+            Padding="10"
+            BorderBrush="Yellow"
+            Background="White"
+            Foreground="Black"
+            AutomationProperties.HelpText="{x:Static local:LocalizableStrings.settingsWindow_wowMenuPath_searchButton_accessibilityHint}"
+            Click="wowMenuPathSearchButton_Click"
+        />
+
+
+
+        <Button
+            x:Name="okButton"
+            Content="{x:Static local:LocalizableStrings.settingsWindow_okButton_title}"
+            Width="150"
+            Height="70"
+            Grid.Row="3"
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="18"
+            Padding="10"
+            BorderBrush="Yellow"
+            Background="White"
+            Foreground="Black"
+            AutomationProperties.HelpText="{x:Static local:LocalizableStrings.settingsWindow_okButton_accessibilityHint}"
+            Click="okButton_Click"
+        />
+
+        <Button
+            x:Name="cancelButton"
+            Content="{x:Static local:LocalizableStrings.settingsWindow_cancelButton_title}"
+            Width="150"
+            Height="70"
+            Grid.Row="3"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="18"
+            Padding="10"
+            BorderBrush="Yellow"
+            Background="White"
+            Foreground="Black"
+            AutomationProperties.HelpText="{x:Static local:LocalizableStrings.settingsWindow_cancelButton_accessibilityHint}"
+            Click="cancelButton_Click"
+        />
+    </Grid>
+</Window>

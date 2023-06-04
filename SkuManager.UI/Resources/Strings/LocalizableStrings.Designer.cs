@@ -61,6 +61,24 @@ namespace SkuManager.UI.Resources.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bitte wähle den interface-Ordner deiner World of Warcraft-Classic installation. ähnelt.
+        /// </summary>
+        public static string folderDialog_wowInterfacePath_description {
+            get {
+                return ResourceManager.GetString("folderDialog_wowInterfacePath_description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Wähle den Ordner deiner wow_menu installation aus. ähnelt.
+        /// </summary>
+        public static string folderDialog_wowMenuPath_description {
+            get {
+                return ResourceManager.GetString("folderDialog_wowMenuPath_description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Installiert alle Sku-WoW-Addons/Skripte und deren Abhängigkeiten, welche im eingestellten Manifest enthalten sind. ähnelt.
         /// </summary>
         public static string mainwindow_action_install_description {
@@ -260,6 +278,136 @@ namespace SkuManager.UI.Resources.Strings {
         public static string mainwindow_title {
             get {
                 return ResourceManager.GetString("mainwindow_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Schließt dieses Fenster und kehrt zum Hauptfenster zurück. Dabei werden vorgenommene Änderungen verworfen. ähnelt.
+        /// </summary>
+        public static string settingsWindow_cancelButton_accessibilityHint {
+            get {
+                return ResourceManager.GetString("settingsWindow_cancelButton_accessibilityHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Abbrechen ähnelt.
+        /// </summary>
+        public static string settingsWindow_cancelButton_title {
+            get {
+                return ResourceManager.GetString("settingsWindow_cancelButton_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Wähle hier ein Addon-Manifest aus. Diese werden verwendet, um zu Steuern welche Addons installiert/aktualisiert werden sollen. ähnelt.
+        /// </summary>
+        public static string settingsWindow_manifestPicker_instructionsLabel {
+            get {
+                return ResourceManager.GetString("settingsWindow_manifestPicker_instructionsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Speichert die Einstellungen und kehrt zum Hauptfenster zurück. ähnelt.
+        /// </summary>
+        public static string settingsWindow_okButton_accessibilityHint {
+            get {
+                return ResourceManager.GetString("settingsWindow_okButton_accessibilityHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die OK ähnelt.
+        /// </summary>
+        public static string settingsWindow_okButton_title {
+            get {
+                return ResourceManager.GetString("settingsWindow_okButton_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Skumanager - Einstellungen ähnelt.
+        /// </summary>
+        public static string settingswindow_title {
+            get {
+                return ResourceManager.GetString("settingswindow_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Pfad zum Interface-Ordner deiner World of Warcraft Classic installation.
+        ///Benutze den Schalter &quot;Ordner suchen&quot; um einen Dialog zum auswählen des Ordners zu öffnen. Du kannst in der schreibgeschützten Textbox den Pfad überprüfen. Er muss auf &quot;interface&quot; enden. ähnelt.
+        /// </summary>
+        public static string settingsWindow_wowInterfacePath_instructionsLabel {
+            get {
+                return ResourceManager.GetString("settingsWindow_wowInterfacePath_instructionsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Öffnet einen Ordner-Suchen Dialog in dem du den geforderten Ordner suchen kannst. Bestätige die auswahl dann mit OK. ähnelt.
+        /// </summary>
+        public static string settingsWindow_wowInterfacePath_searchButton_accessibilityHint {
+            get {
+                return ResourceManager.GetString("settingsWindow_wowInterfacePath_searchButton_accessibilityHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner suchen ähnelt.
+        /// </summary>
+        public static string settingsWindow_wowInterfacePath_searchButton_title {
+            get {
+                return ResourceManager.GetString("settingsWindow_wowInterfacePath_searchButton_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Wähle hier den Pfad zu deiner wow_menu installation. 
+        ///Bitte beachte das in den Ordner der von dir ausgewählt wird, die Dateien von wow_menu zu finden sein sollten. D.h. im Ordner den Du auswählst sollten die .ahk-Dateien usw. vorhanden sein. 
+        ///Falls Du das wow_menu erst installieren musst, werden die Dateien in dem Ordner abgelegt, den Du hier auswählst.
+        ///Du kannst in der schreibgeschützten Textbox den Pfad überprüfen. ähnelt.
+        /// </summary>
+        public static string settingsWindow_wowMenuPath_instructionsLabel {
+            get {
+                return ResourceManager.GetString("settingsWindow_wowMenuPath_instructionsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Öffnet einen Ordner-Suchen Dialog in dem du den geforderten Ordner suchen kannst. Bestätige die auswahl dann mit OK. ähnelt.
+        /// </summary>
+        public static string settingsWindow_wowMenuPath_searchButton_accessibilityHint {
+            get {
+                return ResourceManager.GetString("settingsWindow_wowMenuPath_searchButton_accessibilityHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ordner suchen ähnelt.
+        /// </summary>
+        public static string settingsWindow_wowMenuPath_searchButton_title {
+            get {
+                return ResourceManager.GetString("settingsWindow_wowMenuPath_searchButton_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Benutze TAB um zu dem Schalter zu springen, mit dem Du den geforderten Ordner suchen kannst. ähnelt.
+        /// </summary>
+        public static string settingsWindow_wowMenuPath_textbox_accessibilityHint {
+            get {
+                return ResourceManager.GetString("settingsWindow_wowMenuPath_textbox_accessibilityHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Benutze TAB um zu dem Schalter zu springen, mit dem Du den geforderten Ordner suchen kannst. ähnelt.
+        /// </summary>
+        public static string settingsWindowwowInterfacePath_textBox_accessibilityHint {
+            get {
+                return ResourceManager.GetString("settingsWindowwowInterfacePath_textBox_accessibilityHint", resourceCulture);
             }
         }
     }

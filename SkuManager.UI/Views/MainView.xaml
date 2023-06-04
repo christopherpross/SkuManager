@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SkuManager.UI.Resources.Strings"
             mc:Ignorable="d"
+        x:Name="MainWindow"
         Title="{x:Static local:LocalizableStrings.mainwindow_title}"
         Height="1000" Width="1000"
         >
@@ -62,7 +63,7 @@
             x:Name="actionDescription"
             IsReadOnly="True"
             AutomationProperties.Name="{x:Static local:LocalizableStrings.mainwindow_actionDescription_accessibilityDescription}"
-            Text="{x:Static local:LocalizableStrings.mainwindow_actionDescription_placeholder}"
+            Text="{Binding CurrentActionDescription}"
             Grid.Row="1"
             Grid.Column="2"
             HorizontalAlignment="Stretch"
@@ -104,6 +105,7 @@
             Background="White"
             Foreground="Black"
             AutomationProperties.HelpText="{x:Static local:LocalizableStrings.mainwindow_optionsButton_accessibilityHint}"
+            Click="optionsButton_Click"
         />
 
         <Button 

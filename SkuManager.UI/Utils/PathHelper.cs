@@ -20,4 +20,12 @@ public static class PathHelper
             return Path.Combine(RootDirectory ?? AppDomain.CurrentDomain.BaseDirectory, "logs");
         }
     }
+
+    public static string ManifestDirectory
+    {
+        get
+        {
+            return Path.Combine(RootDirectory ?? AppDomain.CurrentDomain.BaseDirectory, "manifests");
+        }
+    }
 }

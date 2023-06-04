@@ -1,4 +1,4 @@
-﻿namespace SkuManager.AddonManifest;
+﻿namespace SkuManager.AddonManifests;
 public class AddonData
 {
     public string? Name { get; set; }

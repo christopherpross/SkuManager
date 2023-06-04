@@ -9,6 +9,7 @@ using SkuManager.UI.Models;
 using SkuManager.UI.Resources.Strings;
 using SkuManager.UI.Utils;
 using System;
+using SkuManager.UI.ViewModels;
 
 namespace SkuManager.UI.Views;
 /// <summary>
@@ -17,31 +18,36 @@ namespace SkuManager.UI.Views;
 public partial class MainView : Window
 {
     private ILogger<MainView> logger;
-    public List<MainPageAction> Actions { get; set; }
 
-    public MainView(ILogger<MainView> logger)
+    private MainViewModel _viewModel;
+    private IServiceProvider _serviceProvider;
+
+    public MainView(ILogger<MainView> logger, IServiceProvider serviceProvider, MainViewModel viewModel)
     {
         this.logger = logger;
-        this.Loaded += MainView_Loaded;
+        this._serviceProvider = serviceProvider;
+        this._viewModel = viewModel;
+        this.ContentRendered += OnContentRendered;
         this.Closed += MainView_Closed;
+        this.IsVisibleChanged += MainView_IsVisibleChanged;
         InitializeComponent();
-        DataContext = this;
-       
-        Actions = new List<MainPageAction>
-        {
-            new MainPageAction(LocalizableStrings.mainwindow_action_update_title, LocalizableStrings.mainwindow_action_update_description, MainPageActions.UPDATE),
-            new MainPageAction(LocalizableStrings.mainwindow_action_install_title, LocalizableStrings.mainwindow_action_install_description, MainPageActions.INSTALL)
-        };
+        DataContext = _viewModel;
     }
 
-    private void MainView_Loaded(object sender, RoutedEventArgs e)
+    private void MainView_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
     {
-        logger.LogInformation("MainView loaded");
+        logger.LogInformation("{windowname} visibility changed from {old} to {new}", Name, e.OldValue, e.NewValue);
+    }
+
+    private void OnContentRendered(object? sender, EventArgs e)
+    {
+        logger.LogInformation("{windowname} loaded", Name);
     }
 
     private void MainView_Closed(object? sender, System.EventArgs e)
     {
-        logger.LogInformation("close MainView");
+        logger.LogInformation("{windowname} closing", Name);
+        App.Current.Shutdown();
     }
 
     private void actionPicker_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -53,7 +59,7 @@ public partial class MainView : Window
             MainPageAction? action = sourceComboBox.SelectedItem as MainPageAction;
             if (action != null)
             {
-                actionDescription.Text = action.Description;
+                _viewModel.CurrentActionDescription = action.Description ?? string.Empty;
             }
         }
         catch (Exception ex)
@@ -85,5 +91,18 @@ public partial class MainView : Window
     private void moreMenuItemSkuDiscord_Click(object sender, RoutedEventArgs e)
     {
         BrowserHelper.OpenBrowser("https://discord.gg/AzFwTDmpbk");
+    }
+
+    private void optionsButton_Click(object sender, RoutedEventArgs e)
+    {
+        var settingsView = _serviceProvider.GetService(typeof(SettingsView)) as SettingsView;
+        if (settingsView is not null)
+        {
+            settingsView.ParentWindow = this;
+            settingsView.Owner = this;
+            settingsView?.ShowDialog();
+        } else {
+            logger.LogWarning("could not resolve SettingsView object");
+        }  
     }
 }

@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="folderDialog_wowInterfacePath_description" xml:space="preserve">
+    <value>Bitte wähle den interface-Ordner deiner World of Warcraft-Classic installation.</value>
+  </data>
+  <data name="folderDialog_wowMenuPath_description" xml:space="preserve">
+    <value>Wähle den Ordner deiner wow_menu installation aus.</value>
+  </data>
   <data name="mainwindow_actionDescription_accessibilityDescription" xml:space="preserve">
     <value>Hilfetext zur ausgewählten aktion</value>
   </data>
@@ -187,5 +193,51 @@ Es wird nur nach Updates für die Addons/Skripts und deren abhänigkeiten gesuch
   </data>
   <data name="mainwindow_title" xml:space="preserve">
     <value>SkuManager - Was möchtest du machen?</value>
+  </data>
+  <data name="settingsWindowwowInterfacePath_textBox_accessibilityHint" xml:space="preserve">
+    <value>Benutze TAB um zu dem Schalter zu springen, mit dem Du den geforderten Ordner suchen kannst.</value>
+  </data>
+  <data name="settingsWindow_cancelButton_accessibilityHint" xml:space="preserve">
+    <value>Schließt dieses Fenster und kehrt zum Hauptfenster zurück. Dabei werden vorgenommene Änderungen verworfen.</value>
+  </data>
+  <data name="settingsWindow_cancelButton_title" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="settingsWindow_manifestPicker_instructionsLabel" xml:space="preserve">
+    <value>Wähle hier ein Addon-Manifest aus. Diese werden verwendet, um zu Steuern welche Addons installiert/aktualisiert werden sollen.</value>
+  </data>
+  <data name="settingsWindow_okButton_accessibilityHint" xml:space="preserve">
+    <value>Speichert die Einstellungen und kehrt zum Hauptfenster zurück.</value>
+  </data>
+  <data name="settingsWindow_okButton_title" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="settingswindow_title" xml:space="preserve">
+    <value>Skumanager - Einstellungen</value>
+  </data>
+  <data name="settingsWindow_wowInterfacePath_instructionsLabel" xml:space="preserve">
+    <value>Pfad zum Interface-Ordner deiner World of Warcraft Classic installation.
+Benutze den Schalter "Ordner suchen" um einen Dialog zum auswählen des Ordners zu öffnen. Du kannst in der schreibgeschützten Textbox den Pfad überprüfen. Er muss auf "interface" enden.</value>
+  </data>
+  <data name="settingsWindow_wowInterfacePath_searchButton_accessibilityHint" xml:space="preserve">
+    <value>Öffnet einen Ordner-Suchen Dialog in dem du den geforderten Ordner suchen kannst. Bestätige die auswahl dann mit OK.</value>
+  </data>
+  <data name="settingsWindow_wowInterfacePath_searchButton_title" xml:space="preserve">
+    <value>Ordner suchen</value>
+  </data>
+  <data name="settingsWindow_wowMenuPath_instructionsLabel" xml:space="preserve">
+    <value>Wähle hier den Pfad zu deiner wow_menu installation. 
+Bitte beachte das in den Ordner der von dir ausgewählt wird, die Dateien von wow_menu zu finden sein sollten. D.h. im Ordner den Du auswählst sollten die .ahk-Dateien usw. vorhanden sein. 
+Falls Du das wow_menu erst installieren musst, werden die Dateien in dem Ordner abgelegt, den Du hier auswählst.
+Du kannst in der schreibgeschützten Textbox den Pfad überprüfen.</value>
+  </data>
+  <data name="settingsWindow_wowMenuPath_searchButton_accessibilityHint" xml:space="preserve">
+    <value>Öffnet einen Ordner-Suchen Dialog in dem du den geforderten Ordner suchen kannst. Bestätige die auswahl dann mit OK.</value>
+  </data>
+  <data name="settingsWindow_wowMenuPath_searchButton_title" xml:space="preserve">
+    <value>Ordner suchen</value>
+  </data>
+  <data name="settingsWindow_wowMenuPath_textbox_accessibilityHint" xml:space="preserve">
+    <value>Benutze TAB um zu dem Schalter zu springen, mit dem Du den geforderten Ordner suchen kannst.</value>
   </data>
 </root>

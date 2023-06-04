@@ -12,6 +12,7 @@ using System.IO;
 using System.Windows;
 using System.Text;
 using System.Reflection;
+using SkuManager.AddonManifests;
 
 namespace SkuManager.UI;
 /// <summary>
@@ -21,8 +22,9 @@ public partial class App : Application
 {
     private readonly IHost _host;
 
+
     public App()
-    {
+    {   
         _host = Host.CreateDefaultBuilder()
             .UseSerilog((host, loggerConfiguration) =>
             {
@@ -32,6 +34,9 @@ public partial class App : Application
             {              
                 services.AddSingleton<MainViewModel>();
                 services.AddSingleton<MainView>();
+                services.AddSingleton<AddonManifestManager>();
+                services.AddSingleton<SettingsViewModel>();
+                services.AddSingleton<SettingsView>();
             })
             .Build();
     }
