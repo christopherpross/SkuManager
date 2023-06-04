@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -6,6 +6,14 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+  
+  <Target Name="CopyAddonManifests" AfterTargets="Build">
+    <ItemGroup>
+      <AddonManifestFiles Include="$(ProjectDir)AddonManifests\**" />
+    </ItemGroup>
+    <Copy SourceFiles="@(AddonManifestFiles)" DestinationFolder="$(OutputPath)AddonManifests" SkipUnchangedFiles="true" />
+  </Target>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />

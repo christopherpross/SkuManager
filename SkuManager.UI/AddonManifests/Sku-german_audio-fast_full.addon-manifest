@@ -1,0 +1,48 @@
+{
+  "Name": "Sku German audio fast full",
+  "Description": "Enthält alle Sku-Addons und das deutsche Audio-Fast-Addon.",
+    "Addons": [
+        {
+            "Name": "Sku",
+            "Description": "Main Sku-Addon",
+            "GithubOwner": "duugu",
+            "GithubRepo": "Sku",
+            "NeedsExtraPath": false
+        },
+        {
+            "Name": "SkuAudioData_fast_de",
+            "Description": "audiodata german and fast version.",
+            "GithubOwner": "duugu",
+            "GithubRepo": "SkuAudioData_fast_de",
+            "NeedsExtraPath": false
+        },
+        {
+            "Name": "SkuCustomBeaconsEssential",
+            "Description": "Sku Custom Beacons Essential",
+            "GithubOwner": "duugu",
+            "GithubRepo": "SkuCustomBeaconsEssential",
+            "NeedsExtraPath": false
+        },
+        {
+            "Name": "SkuBeaconSoundsets",
+            "Description": "Sku Beacon Soundsets",
+            "GithubOwner": "duugu",
+            "GithubRepo": "SkuBeaconSoundsets",
+            "NeedsExtraPath": false
+        },
+        {
+            "Name": "SkuCustomBeaconsAdditional",
+            "Description": "Sku Custom Beacons Additional",
+            "GithubOwner": "duugu",
+            "GithubRepo": "SkuCustomBeaconsAdditional",
+            "NeedsExtraPath": false
+        },
+        {
+            "Name": "wow_menu",
+            "Description": "wow_menu, for making the wow-launcher accessible",
+            "GithubOwner": "duugu",
+            "GithubRepo": "wow_menu",
+            "NeedsExtraPath": true
+        }
+    ]
+}

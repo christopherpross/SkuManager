@@ -25,7 +25,7 @@ public static class PathHelper
     {
         get
         {
-            return Path.Combine(RootDirectory ?? AppDomain.CurrentDomain.BaseDirectory, "manifests");
+            return Path.Combine(RootDirectory ?? AppDomain.CurrentDomain.BaseDirectory, "AddonManifests");
         }
     }
 }
