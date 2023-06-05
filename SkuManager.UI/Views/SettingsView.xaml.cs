@@ -107,7 +107,8 @@ public partial class SettingsView : Window
         var dialog = new VistaFolderBrowserDialog();
         dialog.Description = LocalizableStrings.folderDialog_wowInterfacePath_description;
         dialog.UseDescriptionForTitle = true;
-        if ((bool)dialog.ShowDialog(this))
+        var dialogResult = dialog.ShowDialog(this);
+        if (dialogResult is not null && dialogResult == true)
         {
             Properties.Settings.Default.WoWInterfaceFolderPath = dialog.SelectedPath;
         }
@@ -119,7 +120,8 @@ public partial class SettingsView : Window
         var dialog = new VistaFolderBrowserDialog();
         dialog.Description = LocalizableStrings.folderDialog_wowMenuPath_description;
         dialog.UseDescriptionForTitle = true;
-        if ((bool)dialog.ShowDialog(this))
+        var dialogResult = dialog.ShowDialog(this);
+        if (dialogResult is not null && dialogResult == true)
         {
             Properties.Settings.Default.WoWMenuPath = dialog.SelectedPath;
         }
