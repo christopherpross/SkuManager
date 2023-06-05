@@ -61,6 +61,51 @@ namespace SkuManager.UI.Resources.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bricht die Aktion ab und kehrt zum Hauptfenster zurück. ähnelt.
+        /// </summary>
+        public static string confirmActionView_noButton_accessibilityHint {
+            get {
+                return ResourceManager.GetString("confirmActionView_noButton_accessibilityHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Nein ähnelt.
+        /// </summary>
+        public static string confirmActionView_noButton_title {
+            get {
+                return ResourceManager.GetString("confirmActionView_noButton_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bestätigung erforderlich ähnelt.
+        /// </summary>
+        public static string confirmActionView_title {
+            get {
+                return ResourceManager.GetString("confirmActionView_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Bestätigt die Aktion ähnelt.
+        /// </summary>
+        public static string confirmActionView_yesButton_accessibilityHint {
+            get {
+                return ResourceManager.GetString("confirmActionView_yesButton_accessibilityHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Ja ähnelt.
+        /// </summary>
+        public static string confirmActionView_yesButton_title {
+            get {
+                return ResourceManager.GetString("confirmActionView_yesButton_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Bitte wähle den interface-Ordner deiner World of Warcraft-Classic installation. ähnelt.
         /// </summary>
         public static string folderDialog_wowInterfacePath_description {

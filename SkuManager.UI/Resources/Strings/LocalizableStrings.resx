@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="confirmActionView_noButton_accessibilityHint" xml:space="preserve">
+    <value>Bricht die Aktion ab und kehrt zum Hauptfenster zurück.</value>
+  </data>
+  <data name="confirmActionView_noButton_title" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="confirmActionView_title" xml:space="preserve">
+    <value>Bestätigung erforderlich</value>
+  </data>
+  <data name="confirmActionView_yesButton_accessibilityHint" xml:space="preserve">
+    <value>Bestätigt die Aktion</value>
+  </data>
+  <data name="confirmActionView_yesButton_title" xml:space="preserve">
+    <value>Ja</value>
+  </data>
   <data name="folderDialog_wowInterfacePath_description" xml:space="preserve">
     <value>Bitte wähle den interface-Ordner deiner World of Warcraft-Classic installation.</value>
   </data>
