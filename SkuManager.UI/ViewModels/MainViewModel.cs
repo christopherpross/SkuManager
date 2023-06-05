@@ -1,5 +1,6 @@
 ﻿using SkuManager.UI.Models;
 using System.Collections.Generic;
+using System;
 
 using SkuManager.UI.Utils;
 using SkuManager.UI.Resources.Strings;
@@ -52,5 +53,22 @@ public class MainViewModel : PropertyChangedBase
             new MainPageAction(LocalizableStrings.mainwindow_action_install_title, LocalizableStrings.mainwindow_action_install_description, MainPageActions.INSTALL)
         };
         _currentActionDescription = LocalizableStrings.mainwindow_actionDescription_placeholder;
+    }
+
+    public string CheckSettings()
+    {
+        if (string.IsNullOrEmpty(Properties.Settings.Default.AddonManifest))
+            return LocalizableStrings.settings_error_manifestIsNull;
+
+        if (string.IsNullOrEmpty(Properties.Settings.Default.WoWInterfaceFolderPath))
+            return LocalizableStrings.settings_error_wowInterfacePathIsNull;
+
+        if (string.IsNullOrEmpty(Properties.Settings.Default.WoWMenuPath))
+            return LocalizableStrings.settings_error_wowMenuPathIsNull;
+
+        if (!Properties.Settings.Default.WoWInterfaceFolderPath.EndsWith("interface", StringComparison.OrdinalIgnoreCase))
+            return LocalizableStrings.settings_error_wowInterfacePathEndsNotWithInterface;
+
+        return string.Empty;
     }
 }

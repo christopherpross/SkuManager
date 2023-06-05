@@ -88,6 +88,7 @@
             Background="White"
             Foreground="Black"
             AutomationProperties.HelpText="{x:Static local:LocalizableStrings.mainwindow_okButton_accessibilityHint}"
+            Click="okButton_Click"
         />
 
         <Button

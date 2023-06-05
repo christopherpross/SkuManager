@@ -240,4 +240,26 @@ Du kannst in der schreibgeschützten Textbox den Pfad überprüfen.</value>
   <data name="settingsWindow_wowMenuPath_textbox_accessibilityHint" xml:space="preserve">
     <value>Benutze TAB um zu dem Schalter zu springen, mit dem Du den geforderten Ordner suchen kannst.</value>
   </data>
+  <data name="settings_error_caption" xml:space="preserve">
+    <value>Deine Einstellungen sind nicht valide!</value>
+  </data>
+  <data name="settings_error_mainMessage" xml:space="preserve">
+    <value>Die Einstellungen sind nicht valide.
+Bitte Überprüfe nocheinmal deine Einstellungen und versuche es dann erneut.
+Grund:
+{0}</value>
+    <comment>0} steht für einer der anderen strings, die den prefix settings_error haben.</comment>
+  </data>
+  <data name="settings_error_manifestIsNull" xml:space="preserve">
+    <value>Das Addon-Manifest wurde nicht konfiguriert.</value>
+  </data>
+  <data name="settings_error_wowInterfacePathEndsNotWithInterface" xml:space="preserve">
+    <value>Der Pfad zum Interface-Ordner deiner WoW-Classic installation endet nicht mit "interface". Bitte Überprüfe ob der Pfad korrekt ist.</value>
+  </data>
+  <data name="settings_error_wowInterfacePathIsNull" xml:space="preserve">
+    <value>Der Pfad zum Interface-Ordner deiner WoW-Classic installation wurde nicht konfiguriert.</value>
+  </data>
+  <data name="settings_error_wowMenuPathIsNull" xml:space="preserve">
+    <value>Der Installationspfad des wow_menu's wurde nicht konfiguriert.</value>
+  </data>
 </root>

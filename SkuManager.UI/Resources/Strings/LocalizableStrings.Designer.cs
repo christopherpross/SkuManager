@@ -282,6 +282,63 @@ namespace SkuManager.UI.Resources.Strings {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Deine Einstellungen sind nicht valide! ähnelt.
+        /// </summary>
+        public static string settings_error_caption {
+            get {
+                return ResourceManager.GetString("settings_error_caption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Die Einstellungen sind nicht valide.
+        ///Bitte Überprüfe nocheinmal deine Einstellungen und versuche es dann erneut.
+        ///Grund:
+        ///{0} ähnelt.
+        /// </summary>
+        public static string settings_error_mainMessage {
+            get {
+                return ResourceManager.GetString("settings_error_mainMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Das Addon-Manifest wurde nicht konfiguriert. ähnelt.
+        /// </summary>
+        public static string settings_error_manifestIsNull {
+            get {
+                return ResourceManager.GetString("settings_error_manifestIsNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Pfad zum Interface-Ordner deiner WoW-Classic installation endet nicht mit &quot;interface&quot;. Bitte Überprüfe ob der Pfad korrekt ist. ähnelt.
+        /// </summary>
+        public static string settings_error_wowInterfacePathEndsNotWithInterface {
+            get {
+                return ResourceManager.GetString("settings_error_wowInterfacePathEndsNotWithInterface", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Pfad zum Interface-Ordner deiner WoW-Classic installation wurde nicht konfiguriert. ähnelt.
+        /// </summary>
+        public static string settings_error_wowInterfacePathIsNull {
+            get {
+                return ResourceManager.GetString("settings_error_wowInterfacePathIsNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Der Installationspfad des wow_menu&apos;s wurde nicht konfiguriert. ähnelt.
+        /// </summary>
+        public static string settings_error_wowMenuPathIsNull {
+            get {
+                return ResourceManager.GetString("settings_error_wowMenuPathIsNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Schließt dieses Fenster und kehrt zum Hauptfenster zurück. Dabei werden vorgenommene Änderungen verworfen. ähnelt.
         /// </summary>
         public static string settingsWindow_cancelButton_accessibilityHint {

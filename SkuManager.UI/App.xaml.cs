@@ -13,6 +13,7 @@ using System.Windows;
 using System.Text;
 using System.Reflection;
 using SkuManager.AddonManifests;
+using System.Diagnostics;
 
 namespace SkuManager.UI;
 /// <summary>
@@ -43,6 +44,7 @@ public partial class App : Application
 
     protected override void OnStartup(StartupEventArgs e)
     {
+        base.OnStartup(e);  
         _host.Start();
         Log.Information("starting SkuManager {version} on {os}.", Assembly.GetExecutingAssembly().GetName().Version?.ToString(), Environment.OSVersion);
 

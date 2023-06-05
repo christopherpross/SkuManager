@@ -10,6 +10,8 @@ using SkuManager.UI.Resources.Strings;
 using SkuManager.UI.Utils;
 using System;
 using SkuManager.UI.ViewModels;
+using Ookii.Dialogs.Wpf;
+using System.Diagnostics;
 
 namespace SkuManager.UI.Views;
 /// <summary>
@@ -104,5 +106,15 @@ public partial class MainView : Window
         } else {
             logger.LogWarning("could not resolve SettingsView object");
         }  
+    }
+
+    private void okButton_Click(object sender, RoutedEventArgs e)
+    {
+        var settingsCheckResult = _viewModel.CheckSettings();
+        if (settingsCheckResult != string.Empty)
+        {
+            MessageBox.Show(string.Format(LocalizableStrings.settings_error_mainMessage, settingsCheckResult), LocalizableStrings.settings_error_caption, MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
+        }
     }
 }
