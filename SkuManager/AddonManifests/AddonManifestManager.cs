@@ -47,6 +47,30 @@ public class AddonManifestManager
         return manifests;
     }
 
+    public AddonManifest? GetAddonManifestByName(string name, string directoryPath)
+    {
+        Guard.Against.NullOrWhiteSpace(directoryPath, nameof(directoryPath));
+        Guard.Against.NullOrWhiteSpace(name, nameof(name));
+        Guard.Against.DoesNotExist(directoryPath, nameof(directoryPath));
+
+        try
+        {
+            var manifest = LoadAddonManifests(directoryPath).FirstOrDefault(m => m.Name == name);
+
+            if (manifest != null)
+            {
+                return manifest;
+            }
+
+            logger.LogWarning("Addon manifest for {addonName} not found.", name);
+        }
+        catch (Exception ex)
+        {
+                    logger.LogError(ex, "Failed to get addon manifest by name {addonName}", name);
+        }
+        return null;
+    }
+
     private AddonManifest? LoadAddonManifestFromFile(string filePath)
     {
         Guard.Against.NullOrWhiteSpace(filePath, nameof(filePath));
