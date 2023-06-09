@@ -55,6 +55,7 @@
                 BorderBrush="Yellow"
                 Margin="10"
                 Padding="10,5"
+                Click="yesButton_Click"
             />
 
             <Button
@@ -71,6 +72,7 @@
                 BorderBrush="Yellow"
                 Margin="10"
                 Padding="10,5"
+                Click="noButton_Click"
             />
         </Grid>
     </Grid>

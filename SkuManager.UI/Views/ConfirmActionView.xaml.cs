@@ -55,4 +55,16 @@ public partial class ConfirmActionView : Window
     {
         logger.LogInformation("{windowname} closing", Name);
     }
+
+    private void yesButton_Click(object sender, RoutedEventArgs e)
+    {
+        DialogResult = true;
+        this.Close();
+    }
+
+    private void noButton_Click(object sender, RoutedEventArgs e)
+    {
+        DialogResult = false;
+        this.Close();   
+    }
 }
