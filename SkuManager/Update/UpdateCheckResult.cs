@@ -9,6 +9,15 @@ public class UpdateCheckResult
     public string? Name => localAddon?.AddonData.Name;
     public AddonVersion? LocalVersion => localAddon?.version;
     public AddonVersion? RemoteVersion => remoteAddon?.Version;
+    public bool UpdateAvaiable
+    {
+        get
+        {
+            if (LocalVersion is null || RemoteVersion is null)
+                return false;
+            return RemoteVersion > LocalVersion;
+        }
+    }
 
     public UpdateCheckResult(LocalAddon? localAddon, RemoteAddon? remoteAddon)
     {

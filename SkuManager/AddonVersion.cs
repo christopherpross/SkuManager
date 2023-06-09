@@ -19,7 +19,7 @@ public class AddonVersion : IComparable<AddonVersion>
     public static AddonVersion Parse(string versionString)
     {
         if (string.IsNullOrEmpty(versionString))
-            throw new ArgumentException("Invalid version string");
+            throw new ArgumentException($"Invalid version string {versionString}");
 
         char? prefix = null;
         int majorStartIndex = 0;

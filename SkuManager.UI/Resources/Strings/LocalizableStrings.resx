@@ -277,4 +277,13 @@ Grund:
   <data name="settings_error_wowMenuPathIsNull" xml:space="preserve">
     <value>Der Installationspfad des wow_menu's wurde nicht konfiguriert.</value>
   </data>
+  <data name="updateCheckDialog_text" xml:space="preserve">
+    <value>Es wird nach Updates gesucht, Bitte warten!</value>
+  </data>
+  <data name="updateCheckDialog_title" xml:space="preserve">
+    <value>Suche nach Updates</value>
+  </data>
+  <data name="updateCheck_noUpdatesAvailable" xml:space="preserve">
+    <value>Es sind keine Aktualisierungen verfügbar.</value>
+  </data>
 </root>

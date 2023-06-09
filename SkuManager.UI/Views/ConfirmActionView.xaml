@@ -20,6 +20,8 @@
             Orientation="Vertical">
             <TextBox
                 x:Name="summaryTextbox"
+                IsReadOnly="True"
+                IsReadOnlyCaretVisible="True"
                 Text="{Binding ConfirmationText}"
                 Background="White" 
                 Foreground="Black"
@@ -28,7 +30,6 @@
                 TextWrapping="Wrap" 
                 Height="Auto" 
                 MinHeight="20"
-                IsReadOnly="True"
             />
         </StackPanel>
 
@@ -43,6 +44,7 @@
 
             <Button
                 x:Name="yesButton"
+                IsDefault="True"
                 Content="{x:Static local:LocalizableStrings.confirmActionView_yesButton_title}"
                 AutomationProperties.HelpText="{x:Static local:LocalizableStrings.confirmActionView_yesButton_accessibilityHint}"
                 Grid.Column="0"
@@ -60,6 +62,7 @@
 
             <Button
                 x:Name="noButton"
+                IsCancel="True"
                 Content="{x:Static local:LocalizableStrings.confirmActionView_noButton_title}"
                 AutomationProperties.HelpText="{x:Static local:LocalizableStrings.confirmActionView_noButton_accessibilityHint}"
                 Grid.Column="1"

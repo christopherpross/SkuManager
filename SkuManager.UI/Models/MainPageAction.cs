@@ -4,7 +4,7 @@ public class MainPageAction
 {
     public string? Title { get; set; }
     public string? Description { get; set; }
-    MainPageActions Action { get; set; }
+    public MainPageActions Action { get; set; }
 
     public MainPageAction(string? title, string? description, MainPageActions action)
     {

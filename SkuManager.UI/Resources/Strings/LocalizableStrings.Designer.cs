@@ -512,5 +512,32 @@ namespace SkuManager.UI.Resources.Strings {
                 return ResourceManager.GetString("settingsWindowwowInterfacePath_textBox_accessibilityHint", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Es sind keine Aktualisierungen verfügbar. ähnelt.
+        /// </summary>
+        public static string updateCheck_noUpdatesAvailable {
+            get {
+                return ResourceManager.GetString("updateCheck_noUpdatesAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Es wird nach Updates gesucht, Bitte warten! ähnelt.
+        /// </summary>
+        public static string updateCheckDialog_text {
+            get {
+                return ResourceManager.GetString("updateCheckDialog_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Suche nach Updates ähnelt.
+        /// </summary>
+        public static string updateCheckDialog_title {
+            get {
+                return ResourceManager.GetString("updateCheckDialog_title", resourceCulture);
+            }
+        }
     }
 }

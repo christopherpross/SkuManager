@@ -25,25 +25,21 @@ public partial class ConfirmActionView : Window
         DataContext = _viewModel;
         this.ContentRendered += OnContentRendered;
         this.Closed += OnClosed;
-        this.Closing += OnClosing;
+        //this.Closing += OnClosing;
         this.IsVisibleChanged += SettingsView_IsVisibleChanged;
     }
 
     private void SettingsView_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
     {
         logger.LogInformation("{windowname} visibility changed from {old} to {new}", Name, e.OldValue, e.NewValue);
-        if ((Visibility)e.NewValue == Visibility.Visible)
-        {
-            summaryTextbox.Focus();
-        }
     }
-
+    /*
     private void OnClosing(object? sender, CancelEventArgs e)
     {
         // hide only window, that we have the possibility to open a second time
         this.Visibility = Visibility.Collapsed;
         e.Cancel = true;
-    }
+    }*/
 
     private void OnContentRendered(object? sender, EventArgs e)
     {
@@ -58,8 +54,7 @@ public partial class ConfirmActionView : Window
 
     private void yesButton_Click(object sender, RoutedEventArgs e)
     {
-        DialogResult = true;
-        this.Close();
+        this.DialogResult = true;
     }
 
     private void noButton_Click(object sender, RoutedEventArgs e)

@@ -6,4 +6,5 @@ public class AddonData
     public string? GithubOwner { get; set; }
     public string? GithubRepo { get; set; }
     public bool NeedsExtraPath { get; set; } = false;
+    public string TocFileName { get; set; } = string.Empty;
 }

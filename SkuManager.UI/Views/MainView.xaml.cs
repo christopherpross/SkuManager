@@ -116,5 +116,11 @@ public partial class MainView : Window
             MessageBox.Show(string.Format(LocalizableStrings.settings_error_mainMessage, settingsCheckResult), LocalizableStrings.settings_error_caption, MessageBoxButton.OK, MessageBoxImage.Error);
             return;
         }
+        var selectedAction = actionPicker.SelectedItem as MainPageAction;
+        if (selectedAction == null) return;
+        if (selectedAction.Action == MainPageActions.UPDATE)
+        {
+            _viewModel.ExecuteUpdate(this);
+        }
     }
 }

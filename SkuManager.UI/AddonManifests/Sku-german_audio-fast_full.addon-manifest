@@ -17,24 +17,10 @@
             "NeedsExtraPath": false
         },
         {
-            "Name": "SkuCustomBeaconsEssential",
-            "Description": "Sku Custom Beacons Essential",
-            "GithubOwner": "duugu",
-            "GithubRepo": "SkuCustomBeaconsEssential",
-            "NeedsExtraPath": false
-        },
-        {
             "Name": "SkuBeaconSoundsets",
             "Description": "Sku Beacon Soundsets",
             "GithubOwner": "duugu",
             "GithubRepo": "SkuBeaconSoundsets",
-            "NeedsExtraPath": false
-        },
-        {
-            "Name": "SkuCustomBeaconsAdditional",
-            "Description": "Sku Custom Beacons Additional",
-            "GithubOwner": "duugu",
-            "GithubRepo": "SkuCustomBeaconsAdditional",
             "NeedsExtraPath": false
         },
         {
